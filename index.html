@@ -6,52 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap link  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!-- custom css link  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Book Shop</title>
 </head>
 
 <body>
     <header>
         <!-- navbar start  -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3">
-            <div class="container">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 px-4 py-4">
                 <a class="navbar-brand" href="#">BOOK NOW</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                     aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav me-auto my-2 m-auto my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item me-3">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item dropdown me-3">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Contact
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+
+                    <div class="m-auto w-50 d-lg-block d-md-block d-none" role="search">
+
+                        <input class="form-control me-2 w-100" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+
+                    <div class="d-flex">
+
+
+                        <ul class="navbar-nav me-auto my-2 m-auto my-lg-0 navbar-nav-scroll"
+                            style="--bs-scroll-height: 100px;">
+                            <li class="nav-item me-3">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item dropdown me-3">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Contact
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Login</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
         <!-- navbar start  -->
     </header>
 
@@ -63,13 +77,13 @@
                 <div id="carouselExample" class="carousel slide">
                     <div class="carousel-inner rounded">
                         <div class="carousel-item active">
-                            <img src="images/slider1.png" class="d-block w-100" height="500px" alt="...">
+                            <img src="images/slider1.png" class="d-block w-100 slider-img" height="500px" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/slider2.png" class="d-block w-100" height="500px" alt="...">
+                            <img src="images/slider2.png" class="d-block w-100 slider-img" height="500px" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="images/slider3.png" class="d-block w-100" height="500px" alt="...">
+                            <img src="images/slider3.png" class="d-block w-100 slider-img" height="500px" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
@@ -91,69 +105,76 @@
         <section>
             <div class="container mt-5 mb-5">
                 <div class="row">
-                    <div class="col-md-3 col-12  mb-4">
+                    <div class="col-md-3 col-12 mb-4">
                         <div class="card">
                             <img src="images/book1.png" class="card-img-top" height="200px" width="100%" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="itemDetails.html" class="btn btn-primary">Book Now</a>
+                                <h5 class="card-title">ABSALOM, ABSALOM! BY WILLIAM FAULKNER</h5>
+                                <p class="card-text">This quotation for Faulkner’s 1936 novel comes from the Books of
+                                    Samuel – more specifically, 19:4 in 2 Samuel, which is in the Old Testament and
+                                    relates some of the history of Israel.</p>
+                                <a href="itemDetails.html" class="btn btn-primary w-100">Book Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-12 ">
+                    <div class="col-md-3 col-12 mb-4">
                         <div class="card">
                             <img src="images/book2.png" class="card-img-top" height="200px" width="100%" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="itemDetails.html" class="btn btn-primary">Book Now</a>
+                                <h5 class="card-title">A TIME TO KILL BY JOHN GRISHAM</h5>
+                                <p class="card-text">This one is from 3:3 in the Ecclesiastes, again part of the Old
+                                    Testament. The anonymous author is a King of Jerusalem who relates and analyses
+                                    events in his own life.</p>
+                                <a href="itemDetails.html" class="btn btn-primary w-100">Book Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-12 ">
+                    <div class="col-md-3 col-12 mb-4">
                         <div class="card">
                             <img src="images/book3.png" class="card-img-top" height="200px" width="100%" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="itemDetails.html" class="btn btn-primary">Book Now</a>
+                                <h5 class="card-title"> THE HOUSE OF MIRTH BY EDITH WHARTON</h5>
+                                <p class="card-text">Another Ecclesiastes quotation, this time from line 7:4. A
+                                    brilliant sentence: The heart of the wise is in the house of mourning; but the heart
+                                    of fools is in the house of mirth. One of Wharton’s best-known novels, it came out
+                                    in 1905.</p>
+                                <a href="itemDetails.html" class="btn btn-primary w-100">Book Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-12 ">
+                    <div class="col-md-3 col-12 mb-4">
                         <div class="card">
                             <img src="images/book4.png" class="card-img-top" height="200px" width="100%" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="itemDetails.html" class="btn btn-primary">Book Now</a>
+                                <h5 class="card-title">EAST OF EDEN BY JOHN STEINBECK</h5>
+                                <p class="card-text">Steinbeck apparently considered this 1952 novel to be his magnum
+                                    opus, the one which all other novels before it had merely been practice for. The
+                                    title is suitably grand. Taken from Genesis.</p>
+                                <a href="itemDetails.html" class="btn btn-primary w-100">Book Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-12 ">
+                    <div class="col-md-3 col-12 mb-4">
                         <div class="card">
                             <img src="images/book5.png" class="card-img-top" height="200px" width="100%" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="itemDetails.html" class="btn btn-primary">Book Now</a>
+                                <h5 class="card-title">THE SUN ALSO RISES BY ERNEST HEMINGWAY</h5>
+                                <p class="card-text">More Ecclesiastes! This particular quotation is from 1:5, which
+                                    states that The sun also ariseth, and the sun goeth down, and hasteth to his place
+                                    where he arose. Hemingway’s modernist novel came out in 1926.</p>
+                                <a href="itemDetails.html" class="btn btn-primary w-100">Book Now</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-12 ">
+                    <div class="col-md-3 col-12 mb-4">
                         <div class="card">
                             <img src="images/book6.png" class="card-img-top" height="200px" width="100%" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="itemDetails.html" class="btn btn-primary">Book Now</a>
+                                <h5 class="card-title">VILE BODIES BY EVELYN WAUGH</h5>
+                                <p class="card-text">Waugh took the title for his 1930 novel from Philippians, full name
+                                    Epistle to the Philippians, which is part of the New Testament and generally
+                                    attributed to Paul the Apostle. </p>
+                                <a href="itemDetails.html" class="btn btn-primary w-100">Book Now</a>
                             </div>
                         </div>
                     </div>
@@ -167,19 +188,18 @@
     <!-- footer start  -->
     <!-- Footer -->
     <!-- <div class="container"> -->
+    <div class="container">
         <footer class="text-center text-lg-start bg-body-tertiary text-muted">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                 <!-- Left -->
-                <div class="container">
-                    <div class="me-5 d-none d-lg-block">
-                        <span>Get connected with us on social networks:</span>
-                    </div>
+                <div class="d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
                 </div>
                 <!-- Left -->
 
                 <!-- Right -->
-                <div>
+                <div class="d-flex">
                     <a href="" class="me-4 text-reset">
                         <i class="fab fa-facebook-f"></i>
                     </a>
@@ -285,10 +305,11 @@
             <!-- Copyright -->
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
                 © 2021 Copyright:
-                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                <a class="text-reset fw-bold" href="https://WebArtsFactory.com/">WebArtsFactory</a>
             </div>
             <!-- Copyright -->
         </footer>
+    </div>
     <!-- </div> -->
     <!-- Footer -->
     <!-- footer end  -->
